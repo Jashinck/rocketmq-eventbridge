@@ -8,12 +8,15 @@
  *
  *     http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
  */
 
-ALTER TABLE `event_target_class`
-CHANGE COLUMN `target_transform` `target_transform` TEXT NULL DEFAULT NULL ;
+package org.apache.rocketmq.eventbridge.adapter.runtime.boot.hook;
+
+public interface Shutdown {
+    void shutdown() throws Exception;
+}
